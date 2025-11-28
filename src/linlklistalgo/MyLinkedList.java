@@ -68,4 +68,14 @@ public class MyLinkedList {
         return head;
     }
 
+    public static void deleteHead(Node head) {
+        head = head.getNext();
+    }
+    public static void deleteTail(Node head) {
+
+    }
+    public static void deleteKEle(Node head) {
+
+    }
+
 }
