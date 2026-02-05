@@ -2,6 +2,7 @@ package codingpractice.arrays;
 
 public class DuplicateAndMissingElement {
     //-----* 1.brute force *---------
+    // time complexity = O(n2) space complexity = O(1)
     public static int[] duplicateMissingEle(int[] array){
         int duplicateCount=-1;
         int missingCount=-1;
