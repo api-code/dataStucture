@@ -3,6 +3,22 @@ package linlklistalgo;
 import java.util.HashMap;
 
 public class FloydCycleDetection {
+    //Time Complexity: O(N), Space Complexity:O(1)
+    public static boolean isCycleDetected(ListNode head){
+        ListNode fastPointer=head;
+        ListNode slowPointer=head;
+        while(fastPointer!=null && fastPointer.next!=null){
+            slowPointer = slowPointer.next;
+            fastPointer = fastPointer.next.next;
+
+            if(slowPointer==fastPointer){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //Time Complexity: O(N*LogN), Space Complexity: O(n)
     public static boolean calculateLength(ListNode ListNode){
         ListNode temp = ListNode;
         // Create a map to keep track of
@@ -48,8 +64,8 @@ public class FloydCycleDetection {
 
         // Check if there is a loop 
         // in the linked list
-        if (calculateLength(head)) {
-            System.out.println("Loop detected in the linked list.");
+        if (isCycleDetected(head)) {
+            System.out.println("Loop detected in the Given linked list.");
         } else {
             System.out.println("No loop detected in the linked list.");
         }
