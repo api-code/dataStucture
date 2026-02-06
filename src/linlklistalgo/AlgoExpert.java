@@ -3,6 +3,7 @@ package linlklistalgo;
 import LinkedList.Node;
 
 import static linlklistalgo.MyLinkedList.deleteHead;
+import static linlklistalgo.ReverseLinkedList.reverse;
 
 public class AlgoExpert {
     public static void main(String[] args) {
@@ -21,5 +22,7 @@ public class AlgoExpert {
         list.deleteHead(list.getHead());
         System.out.println(list.getHead().getData());
         list.printList();
+
+
     }
 }
